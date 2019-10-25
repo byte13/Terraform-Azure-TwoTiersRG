@@ -1,7 +1,3 @@
-variable "VM-NC-MariaDB-Enabled" {
-  description = "Variable to define if Nextcloud and MariaDB should be installed (true or false)"
-}
-
 variable "PubIP1-FQDN" {
   description = "Frontend server public FQDN"
 }
@@ -28,6 +24,10 @@ variable "SSH-agent-ID" {
 
 variable "SSH-username" {
     description = "EC2 instance Linux account"
+}
+
+variable "Ansible-NC-MariaDB-Enabled" {
+  description = "Variable to define if Nextcloud and MariaDB should be installed (true or false)"
 }
 
 variable "Ansible-PlayDir" {

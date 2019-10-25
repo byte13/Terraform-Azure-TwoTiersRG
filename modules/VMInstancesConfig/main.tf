@@ -46,7 +46,7 @@ provider "null" {
 resource "null_resource" "PS-SEC_TAS_NullSRC" {
 
     # Check if the resource is to be created
-    count = var.VM-NC-MariaDB-Enabled == true ? 1 : 0
+    count = var.Ansible-NC-MariaDB-Enabled == true ? 1 : 0
 
     # Perfrom SysAdmin operations on backend server 
     provisioner "remote-exec" {

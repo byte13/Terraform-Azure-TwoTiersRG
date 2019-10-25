@@ -22,10 +22,6 @@ variable "client_secret" {
   description = "Azure secret ID"
 }
 
-variable "VM-NC-MariaDB-Enabled" {
-  description = "Variable to define if Nextcloud and MariaDB should be installed (true or false)"
-}
-
 variable "RG-Location" {
   description = "Geographical ocation of the Ressource Group (RG)"
 }
@@ -76,6 +72,10 @@ variable "ARM-Image-Sku" {
 
 variable "ARM-Image-Build" {
   description = "Version of the system (OS) image to be installed in VM's"
+}
+
+variable "Ansible-NC-MariaDB-Enabled" {
+  description = "Variable to define if Nextcloud and MariaDB should be installed (true or false)"
 }
 
 variable "Ansible-PlayDir" {

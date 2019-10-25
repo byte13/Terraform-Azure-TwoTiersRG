@@ -2,7 +2,7 @@
 This directory contains modules for Terraform to build a Resource Group (RG) in Microsoft Azure, made of 2 tiers subnets hosting respectively a backend and a frontend Ubuntu server. 
 
 Both virtual machines (VM) will be configured using Ansible playbooks to get a fully secured Nextcloud service.
-You can prevent the installation of MariaDB and Nextcloud using *VM-NC-MariaDB-Enabled = false* in **terraform.tfvars**, in which case the process will end up with a fresh resource group made of 2 subnets (frontend and backend) with a VM each, running Ubuntu 18.04
+You can prevent the installation of MariaDB and Nextcloud using *Ansible-NC-MariaDB-Enabled = false* in **terraform.tfvars**, in which case the process will end up with a fresh resource group made of 2 subnets (frontend and backend) with a VM each, running Ubuntu 18.04
 -LTS image by Canonical.
 
 All steps described have been tested on Ubuntu 18.04-LTS running :

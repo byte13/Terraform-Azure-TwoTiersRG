@@ -80,7 +80,7 @@ module "VMInstances" {
 module "VMInstancesConfig" {
   source = "./modules/VMInstancesConfig"
 
-  VM-NC-MariaDB-Enabled = var.VM-NC-MariaDB-Enabled
+  VM-NC-MariaDB-Enabled = var.Ansible-NC-MariaDB-Enabled
 
   SSH-agent-ID          = var.SSH-agent-ID
   SSH-username          = var.SSH-username

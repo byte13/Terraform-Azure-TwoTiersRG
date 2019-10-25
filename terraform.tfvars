@@ -105,7 +105,7 @@ BE-hostname1       = "dbvm1"
 #SSH-username          = "ubuntu"
 
 # Variable to run this module or not (true or false without quotes)
-VM-NC-MariaDB-Enabled = true
+Ansible-NC-MariaDB-Enabled = true
 
 # Directory where Ansible playbooks have been copied (cloned from GitHub)  
 Ansible-PlayDir       = "/ANSIBLE/playbooks"
