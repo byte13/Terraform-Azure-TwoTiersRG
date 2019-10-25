@@ -21,7 +21,7 @@ f. Create SSH keys to be used later on to execute Ansible playbooks and protect 
 g. Use ssh-agent and ssh-add to unlock aforementioned SSH key so that you will not be prompted prompting for the passphrase each time an SSH connection is established. \
 h. Read all comments and set the variables for your environment in **terraform.tfvars**. This file is located in the root module directory \
 i. Read all comments and follow instructions in README file of the Ansible playbook \
-j. Change working directory into root module of Terraform definitions cloned previously
+j. Change working directory into root module of Terraform definitions cloned previously \
 k. Run the following commands
 
 ```
