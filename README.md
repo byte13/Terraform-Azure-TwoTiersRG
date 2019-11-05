@@ -96,7 +96,8 @@ Triggs the modules described below then displays usefull information about the c
 12. Create frontend server and authorize our SSH public key
 13. Perform some SysAdmin tasks on the frontend VM
 
-**Module VMInstancesConfig runs the Ansible playbooks**
+**Module VMInstancesConfig runs the Ansible playbooks**\
+(executed only if *Ansible-NC-MariaDB-Enabled = true* in **terraform.tfvars**
 
 14. Install and configure Apache, PHP, MariaDB, Redis, Nextcloud and Let'Encrypt
 15. Delete Ansible inventories
