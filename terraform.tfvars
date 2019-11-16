@@ -3,15 +3,15 @@
 # 
 
 # Access and secret keys of the Azure account to be used by Terraform
-# If empty or commented out, you will be prompted to specify them. 
+# If commented out, you will be prompted to specify them. 
 #     For security reasons, it is the preferred method.
 # Please, read https://www.linode.com/docs/applications/configuration-management/secrets-management-with-terraform/
 #         for more information on secrets management, which is crucial.
 
-subscription_id       = ""
-tenant_id             = ""
-client_id             = ""
-client_secret         = ""
+#subscription_id       = ""
+#tenant_id             = ""
+#client_id             = ""
+#client_secret         = ""
 
 #
 # End of variable to be set for root module definitions
