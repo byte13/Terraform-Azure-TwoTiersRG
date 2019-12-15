@@ -193,7 +193,7 @@ resource "azurerm_virtual_machine" "Byte13_VM1" {
     vm_size               = "Standard_DS1_v2"
 
   # Wait for MariaDB backend is available
-    depends_on            = ["azurerm_virtual_machine.Byte13_BEVM1"]
+    depends_on            = [azurerm_virtual_machine.Byte13_BEVM1]
 
   # Uncomment this line to delete the OS disk automatically when deleting the VM
     delete_os_disk_on_termination = true
