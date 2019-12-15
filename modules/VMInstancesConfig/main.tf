@@ -11,28 +11,28 @@ provider "template" {
 }
 
 data  "template_file" "Frontend-servers_template" {
-    template = "${file("./templates/Frontend-servers_inventory.tpl")}"
+    template = file("./templates/Frontend-servers_inventory.tpl")
     vars = {
-        Frontend-server = "${var.PubIP1-FQDN}"
+        Frontend-server = var.PubIP1-FQDN
     }
 }
 
 resource "local_file" "Frontend-servers_inventory-file" {
-    content  = "${data.template_file.Frontend-servers_template.rendered}"
+    content  = data.template_file.Frontend-servers_template.rendered
     filename = "${var.Ansible-PlayDir}/Frontend-servers_inventory"
 }
 
 # The following blocks prepare Ansible inventory file for backend server 
 data  "template_file" "Backend-servers_template" {
-    template = "${file("./templates/Backend-servers_inventory.tpl")}"
+    template = file("./templates/Backend-servers_inventory.tpl")
     vars = {
-        Backend-server = "${var.PubIP2-FQDN}"
+        Backend-server = var.PubIP2-FQDN
     }
 }
 
 resource "local_file" "Backend-servers_inventory-file" {
-    content  = "${data.template_file.Backend-servers_template.rendered}"
-    filename = "${var.Ansible-PlayDir}/Backend-servers_inventory"
+    content  = data.template_file.Backend-servers_template.rendered
+    filename = "${var.Ansible-PlayDir}/Backend-servers_inventory}"
 }
 #
 # End of preparation of Ansible inventory files
@@ -52,10 +52,10 @@ resource "null_resource" "PS-SEC_TAS_NullSRC" {
     provisioner "remote-exec" {
         connection {
             type           = "ssh"
-            host           = "${var.PubIP2-FQDN}"
+            host           = var.PubIP2-FQDN
             agent          = "true"
-            agent_identity = "${var.SSH-agent-ID}"
-            user           = "${var.SSH-username}"
+            agent_identity = var.SSH-agent-ID
+            user           = var.SSH-username
         }
 
         # Ensure apt is clean and install some facilities
@@ -86,10 +86,10 @@ resource "null_resource" "PS-SEC_TAS_NullSRC" {
     provisioner "remote-exec" {
         connection {
             type           = "ssh"
-            host           = "${var.PubIP1-FQDN}"
+            host           = var.PubIP1-FQDN
             agent          = "true"
-            agent_identity = "${var.SSH-agent-ID}"
-            user           = "${var.SSH-username}"
+            agent_identity = var.SSH-agent-ID
+            user           = var.SSH-username
         }
 
         # Ensure apt is clean and install some facilities
