@@ -48,31 +48,31 @@ variable "BackSN-IPv4-Id" {
 
 variable "SSH-pub-key-file" {
   description = "File containing public SSH key to be authorized on account on remote servers"
-  type    = "string"
+  type    = string
 }
 
 variable "SSH-agent-ID" {
   description = "SSH ID to be addedd to SSH agent"
-  type    = "string"
+  type    = string
 }
 variable "SSH-username" {
   description = "Linux account to create on remote servers"
-  type    = "string"
+  type    = string
 }
 
 variable "Pub-hostname1" {
   description = "Hostname of frontend server public IPv4"
-  type    = "string"
+  type    = string
 }
 variable "Pub-hostname2" {
   description = "Hostname of backend server public IPv4"
-  type    = "string"
+  type    = string
 }
 variable "FE-hostname1" {
   description = "Hostname of frontend server"
-  type    = "string"
+  type    = string
 }
 variable "BE-hostname1" {
   description = "Hostname of backend server"
-  type    = "string"
+  type    = string
 }
