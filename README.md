@@ -7,7 +7,7 @@ You can prevent the installation of MariaDB and Nextcloud using *Ansible-NC-Mari
 
 All steps described have been tested on Ubuntu 18.04-LTS running :
 - Terraform 0.12.18
-- Ansible 2.8.5 and 2.0.9
+- Ansible 2.8.5 and 2.9.0
 - Python 2.7.15+
 
 ## Prerequisits to deploy the infrastructure and install a secured Nextcloud instance
