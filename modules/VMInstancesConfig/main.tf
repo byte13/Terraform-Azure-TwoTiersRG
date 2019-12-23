@@ -43,7 +43,7 @@ provider "null" {
 }
 
 # Perfrom SysAdmin operations on remote VMs
-resource "null_resource" "PS-SEC_TAS_NullRES1" {
+resource "null_resource" "Byte13_NullRES1" {
 
     # Check if the resource is to be created
     count = var.Ansible-MariaDB-Enabled == true ? 1 : 0
@@ -83,7 +83,7 @@ resource "null_resource" "PS-SEC_TAS_NullRES1" {
     }
 }
 
-resource "null_resource" "PS-SEC_TAS_NullRES2" {
+resource "null_resource" "Byte13_NullRES2" {
 
     # Check if the resource is to be created
     count = var.Ansible-NC-Enabled == true ? 1 : 0
