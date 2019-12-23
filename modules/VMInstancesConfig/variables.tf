@@ -26,8 +26,12 @@ variable "SSH-username" {
     description = "EC2 instance Linux account"
 }
 
-variable "Ansible-NC-MariaDB-Enabled" {
-  description = "Variable to define if Nextcloud and MariaDB should be installed (true or false)"
+variable "Ansible-MariaDB-Enabled" {
+  description = "Variable to define if MariaDB should be installed on backend server (true or false)"
+}
+
+variable "Ansible-NC-Enabled" {
+  description = "Variable to define if Nextcloud should be installed on frontend server (true or false)"
 }
 
 variable "Ansible-PlayDir" {
