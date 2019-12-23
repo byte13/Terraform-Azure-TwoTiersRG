@@ -104,8 +104,11 @@ BE-hostname1       = "dbvm1"
 # Variable already set in previous section because it is required ny VMInstances module, too
 #SSH-username          = "ubuntu"
 
-# Variable to run this module or not (true or false without quotes)
-Ansible-NC-MariaDB-Enabled = true
+# Variable to install or not MariaDB on backend server (true or false without quotes)
+Ansible-MariaDB-Enabled = true
+
+# Variable to install or not Apche/PHP, Redis, Nextcloud nad Let's Encrypt on frontend server (true or false without quotes)
+Ansible-NC-Enabled = true
 
 # Directory where Ansible playbooks have been copied (cloned from GitHub)  
 Ansible-PlayDir       = "/ANSIBLE/playbooks"
