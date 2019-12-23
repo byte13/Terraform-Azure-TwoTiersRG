@@ -80,24 +80,25 @@ module "VMInstances" {
 module "VMInstancesConfig" {
   source = "./modules/VMInstancesConfig"
 
-  Ansible-NC-MariaDB-Enabled = var.Ansible-NC-MariaDB-Enabled
+  Ansible-MariaDB-Enabled = var.Ansible-MariaDB-Enabled
+  Ansible-NC-Enabled      = var.Ansible-NC-Enabled
 
-  SSH-agent-ID          = var.SSH-agent-ID
-  SSH-username          = var.SSH-username
+  SSH-agent-ID            = var.SSH-agent-ID
+  SSH-username            = var.SSH-username
 
-  Ansible-PlayDir       = var.Ansible-PlayDir
-  Ansible-NCVaultPwd    = var.Ansible-NCVaultPwd
-  Ansible-RedisVaultPwd = var.Ansible-RedisVaultPwd
+  Ansible-PlayDir         = var.Ansible-PlayDir
+  Ansible-NCVaultPwd      = var.Ansible-NCVaultPwd
+  Ansible-RedisVaultPwd   = var.Ansible-RedisVaultPwd
 
-  Nextcloud-FQDN        = module.VMInstances.PubIP1-FQDN
-  Nextcloud-Version     = var.Nextcloud-Version
-  Nextcloud-DataDir     = var.Nextcloud-DataDir
+  Nextcloud-FQDN          = module.VMInstances.PubIP1-FQDN
+  Nextcloud-Version       = var.Nextcloud-Version
+  Nextcloud-DataDir       = var.Nextcloud-DataDir
 
-  Letsencrypt-email     = var.Letsencrypt-email
+  Letsencrypt-email       = var.Letsencrypt-email
 
-  PrivIP1-IPv4          = module.VMInstances.PrivIP1-IPv4
-  FE-hostname1          = module.VMInstances.FE-hostname1
-  PubIP1-FQDN           = module.VMInstances.PubIP1-FQDN
-  BE-hostname1          = module.VMInstances.BE-hostname1
-  PubIP2-FQDN           = module.VMInstances.PubIP2-FQDN
+  PrivIP1-IPv4            = module.VMInstances.PrivIP1-IPv4
+  FE-hostname1            = module.VMInstances.FE-hostname1
+  PubIP1-FQDN             = module.VMInstances.PubIP1-FQDN
+  BE-hostname1            = module.VMInstances.BE-hostname1
+  PubIP2-FQDN             = module.VMInstances.PubIP2-FQDN
 }
