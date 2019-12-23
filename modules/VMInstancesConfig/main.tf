@@ -20,6 +20,7 @@ data  "template_file" "Frontend-servers_template" {
 resource "local_file" "Frontend-servers_inventory-file" {
     content  = data.template_file.Frontend-servers_template.rendered
     filename = "${var.Ansible-PlayDir}/Frontend-servers_inventory"
+    file_permission = 640
 }
 
 # The following blocks prepare Ansible inventory file for backend server 
@@ -33,6 +34,7 @@ data  "template_file" "Backend-servers_template" {
 resource "local_file" "Backend-servers_inventory-file" {
     content  = data.template_file.Backend-servers_template.rendered
     filename = "${var.Ansible-PlayDir}/Backend-servers_inventory"
+    file_permission = 640
 }
 #
 # End of preparation of Ansible inventory files
