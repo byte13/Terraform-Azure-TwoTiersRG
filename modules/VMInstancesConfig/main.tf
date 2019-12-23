@@ -43,10 +43,10 @@ provider "null" {
 }
 
 # Perfrom SysAdmin operations on remote VMs
-resource "null_resource" "PS-SEC_TAS_NullSRC" {
+resource "null_resource" "PS-SEC_TAS_NullRES1" {
 
     # Check if the resource is to be created
-    count = var.Ansible-NC-MariaDB-Enabled == true ? 1 : 0
+    count = var.Ansible-MariaDB-Enabled == true ? 1 : 0
 
     # Perfrom SysAdmin operations on backend server 
     provisioner "remote-exec" {
@@ -81,6 +81,12 @@ resource "null_resource" "PS-SEC_TAS_NullSRC" {
     provisioner "local-exec" {
         command = "if [ -f ${var.Ansible-PlayDir}/Backend-servers_inventory ] ; then shred -u -z ${var.Ansible-PlayDir}/Backend-servers_inventory ; fi"
     }
+}
+
+resource "null_resource" "PS-SEC_TAS_NullRES2" {
+
+    # Check if the resource is to be created
+    count = var.Ansible-NC-Enabled == true ? 1 : 0
 
     # Perfrom SysAdmin operations on frontend server 
     provisioner "remote-exec" {
