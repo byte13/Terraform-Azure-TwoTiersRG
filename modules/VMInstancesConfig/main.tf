@@ -32,7 +32,7 @@ data  "template_file" "Backend-servers_template" {
 
 resource "local_file" "Backend-servers_inventory-file" {
     content  = data.template_file.Backend-servers_template.rendered
-    filename = "${var.Ansible-PlayDir}/Backend-servers_inventory}"
+    filename = "${var.Ansible-PlayDir}/Backend-servers_inventory"
 }
 #
 # End of preparation of Ansible inventory files
