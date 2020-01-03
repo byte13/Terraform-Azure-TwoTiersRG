@@ -97,10 +97,12 @@ Triggs the modules described below then displays usefull information about the c
 13. Perform some SysAdmin tasks on the frontend VM
 
 **Module VMInstancesConfig runs the Ansible playbooks**\
-(executed only if *Ansible-NC-MariaDB-Enabled = true* in **terraform.tfvars**
+( MariaDB installed only if *Ansible-MariaDB-Enabled = true* in **terraform.tfvars** \
+  and Nextcloud installed only if *Ansible-NC-Enabled = true* in **terraform.tfvars** )
 
-14. Install and configure Apache, PHP, MariaDB, Redis, Nextcloud and Let'Encrypt
-15. Delete Ansible inventories
-16. Possibly, disable direct access to backend subnet
+14. Install and configure MariaDB
+15. Delete Ansible inventory of backend server
+16. Install and configure Apache, PHP, Redis, Nextcloud and Let'Encrypt
+17. Delete Ansible inventory of frontend server
+18. Possibly, disable direct access to backend subnet
     - To be re-enabled each time configuration changes must be applied on backend instances
-
